@@ -2,8 +2,8 @@
 set -e # To make it exit on any errors
 
 # Defining install paths
-INSTALL_DIR="$HOME/.mozilla/native-messaging-hosts"
-EXTENSION_DIR="$HOME/.mozilla/extensions/mpv-launcher-extension@example.com"
+INSTALL_DIR="$HOME/.config/google-chrome/native-messaging-hosts"
+EXTENSION_DIR="$HOME/.config/google-chrome/extensions/mpv-launcher-extension@example.com"
 BINARY_PATH="$INSTALL_DIR/mpv_launcher"
 
 # Ensuring Directories Exist

@@ -1,0 +1,27 @@
+{
+  "name": "MPV Launcher",
+  "description": "Launch videos in MPV",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "nativeMessaging",
+    "contextMenus",
+    "notifications"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://*.youtu.be/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*", "*://*.youtu.be/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Open in MPV"
+  }
+}
