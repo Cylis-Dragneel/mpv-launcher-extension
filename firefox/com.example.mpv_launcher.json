@@ -3,5 +3,5 @@
   "description": "MPV Launcher for YouTube links",
   "path": "/home/cylis/src/personal/yt-mpv-extension/extension/firefox/mpv_launcher",
   "type": "stdio",
-  "allowed_extensions": ["mpv-launcher@example.com"]
+  "allowed_extensions": ["mpv-launcher-extension@example.com"]
 }

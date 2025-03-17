@@ -21,7 +21,7 @@
   ],
   "browser_specific_settings": {
     "gecko": {
-      "id": "mpv-launcher@example.com"
+      "id": "mpv-launcher-extension@example.com"
     }
   },
   "browser_action": {
@@ -31,4 +31,4 @@
     "48": "icon48.png",
     "96": "icon96.png"
   }
-} 
+}

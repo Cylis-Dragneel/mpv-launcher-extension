@@ -52,8 +52,8 @@ Copy `com.example.mpv_launcher.json` to your Firefox Native Messaging directory:
 Copy the extension files to the Firefox extensions directory:
 
 ```sh
-mkdir -p ~/.mozilla/extensions/mpv-launcher@example.com/
-cp -r * ~/.mozilla/extensions/mpv-launcher@example.com/
+mkdir -p ~/.mozilla/extensions/mpv-launcher-extension@example.com/
+cp -r * ~/.mozilla/extensions/mpv-launcher-extension@example.com/
 ```
 
 ### 5. Load the Extension in Firefox
