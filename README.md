@@ -18,16 +18,24 @@ MPV Launcher is a Firefox extension that allows users to open YouTube videos in 
 ### Prerequisites
 
 - **Go** (version 1.20 or later)
+- **jq**
 - **Firefox** (latest stable version)
 - **Linux/macOS**
 
 ### 1. Compile the Native Messaging Host
 
-Run the following commands:
+Run the following commands to execute build script and skip to step 5:
 
 ```sh
 git clone https://github.com/Cylis-Dragneel/mpv-launcher-extension.git
 cd mpv-launcher-extension/firefox
+chmod + x build.sh
+./build.sh
+```
+
+Or manually build:
+
+```sh
 go build -o mpv_launcher
 ```
 
@@ -53,7 +61,7 @@ Copy the extension files to the Firefox extensions directory:
 
 ```sh
 mkdir -p ~/.mozilla/extensions/mpv-launcher-extension@example.com/
-cp -r * ~/.mozilla/extensions/mpv-launcher-extension@example.com/
+cp -r manifest.json background.js content.js icon48.png icon96.png ~/.mozilla/extensions/mpv-launcher-extension@example.com/
 ```
 
 ### 5. Load the Extension in Firefox
