@@ -1,9 +1,7 @@
 {
   "name": "com.example.mpv_launcher",
   "description": "MPV Launcher for YouTube links",
-  "path": "/home/cylis/src/personal/yt-mpv-extension/chromium/mpv_launcher",
+  "path": "/home/cylis/.config/chromium/NativeMessagingHosts/mpv_launcher",
   "type": "stdio",
-  "allowed_origins": [
-    "chrome-extension://adkijpgjnjhbklpabjigldhknlhlojeo/"
-  ]
+  "allowed_origins": ["chrome-extension://adkijpgjnjhbklpabjigldhknlhlojeo/"]
 }
