@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "MPV Launcher",
+  "version": "1.0",
+  "description": "Launch videos in MPV",
+  "permissions": [
+    "nativeMessaging",
+    "menus",
+    "notifications",
+    "*://*.youtube.com/*",
+    "*://*.youtu.be/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*", "*://*.youtu.be/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mpv-launcher@example.com"
+    }
+  },
+  "browser_action": {
+    "default_title": "Open in MPV"
+  },
+  "icons": {
+    "48": "icon48.png",
+    "96": "icon96.png"
+  }
+} 
