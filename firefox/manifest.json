@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "MPV Launcher",
-  "version": "3.0",
+  "version": "5.0",
   "description": "Launch videos in MPV",
   "permissions": [
     "nativeMessaging",
