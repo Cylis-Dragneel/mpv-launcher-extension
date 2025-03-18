@@ -1,14 +1,15 @@
 {
   "manifest_version": 2,
   "name": "MPV Launcher",
-  "version": "1.0",
+  "version": "3.0",
   "description": "Launch videos in MPV",
   "permissions": [
     "nativeMessaging",
     "menus",
     "notifications",
     "*://*.youtube.com/*",
-    "*://*.youtu.be/*"
+    "*://*.youtu.be/*",
+    "*://*.instagram.com/reel/*"
   ],
   "background": {
     "scripts": ["background.js"]

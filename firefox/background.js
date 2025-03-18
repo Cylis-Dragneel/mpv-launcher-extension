@@ -3,7 +3,11 @@ browser.menus.create(
     id: "open-in-mpv",
     title: "Open in MPV",
     contexts: ["link"],
-    targetUrlPatterns: ["*://*.youtube.com/*", "*://*.youtu.be/*"],
+    targetUrlPatterns: [
+      "*://*.youtube.com/*",
+      "*://*.youtu.be/*",
+      "*://*.instagram.com/reel/*",
+    ],
   },
   () => {
     if (browser.runtime.lastError) {
@@ -20,7 +24,9 @@ browser.menus.create(
 browser.browserAction.onClicked.addListener((tab) => {
   if (
     tab.url &&
-    (tab.url.includes("youtube.com") || tab.url.includes("youtu.be"))
+    (tab.url.includes("youtube.com") ||
+      tab.url.includes("youtu.be") ||
+      tab.url.includes("instagram.com"))
   ) {
     sendToMpv(tab.url);
   }
@@ -49,8 +55,12 @@ function showError(message) {
 }
 
 function sendToMpv(url) {
-  if (!url || (!url.includes("youtube.com") && !url.includes("youtu.be"))) {
-    showError("Invalid URL: Must be a YouTube URL");
+  if (
+    !url ||
+    (!url.includes("youtube.com") && !url.includes("youtu.be")) ||
+    !url.includes("instagram.com")
+  ) {
+    showError("Invalid URL: Must be a YouTube/Instagram URL");
     return;
   }
 
