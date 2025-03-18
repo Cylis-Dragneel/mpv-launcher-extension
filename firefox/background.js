@@ -58,7 +58,9 @@ function sendToMpv(url) {
   if (
     !url ||
     (!url.includes("youtube.com") && !url.includes("youtu.be")) ||
-    !url.includes("instagram.com")
+    (!url.includes("youtube.com") &&
+      !url.includes("instagram.com") &&
+      !url.includes("youtu.be"))
   ) {
     showError("Invalid URL: Must be a YouTube/Instagram URL");
     return;
